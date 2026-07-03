@@ -4,7 +4,7 @@
 <template>
   <div class="home-view">
     <h1>Este es el HomeView de Yeyo</h1>
-    <p>mokalu-frontapp listo para trabajar</p>
+    <p>cellularcenter-frontapp listo para trabajar</p>
   </div>
 </template>
 

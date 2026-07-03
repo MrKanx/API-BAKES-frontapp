@@ -1,24 +1,24 @@
 <script setup lang="ts">
-// Mokalu - Awwwards Style Landing Page
+// Cellular Center - Awwwards Style Landing Page
 </script>
 
 <template>
   <div class="smooth-scroll-wrapper">
     <!-- HERO SECTION -->
     <section class="hero">
-      <div class="hero-bg" style="background-image: url('/images/hero.png');"></div>
+      <div class="hero-bg" style="background-image: url('/images/tech_hero_bg.png');"></div>
       <div class="hero-overlay"></div>
       
       <nav class="nav">
-        <div class="logo">MOKALÚ.</div>
+        <div class="logo">CELLULAR CENTER</div>
         <a href="#contacto" class="btn-contact">Hablemos</a>
       </nav>
 
       <div class="hero-content">
         <div class="reveal-text">
-          <h1 class="display-title">TIENDA <br/> DE ARTE</h1>
+          <h1 class="display-title">TU NUEVO <br/> IPHONE</h1>
         </div>
-        <p class="hero-subtitle">Materiales premium y piezas personalizadas <br/> para mentes creativas.</p>
+        <p class="hero-subtitle">iPhones seminuevos y servicio técnico especializado <br/> para mantenerte conectado.</p>
       </div>
 
       <div class="scroll-indicator">
@@ -30,34 +30,34 @@
     <!-- MARQUEE -->
     <div class="marquee-container">
       <div class="marquee">
-        <span>CREATIVIDAD SIN LÍMITES &mdash; ARTE PERSONALIZADO &mdash; MATERIALES PREMIUM &mdash; INSPIRACIÓN DIARIA &mdash; </span>
-        <span>CREATIVIDAD SIN LÍMITES &mdash; ARTE PERSONALIZADO &mdash; MATERIALES PREMIUM &mdash; INSPIRACIÓN DIARIA &mdash; </span>
+        <span>INNOVACIÓN CONSTANTE &mdash; TECNOLOGÍA DE PUNTA &mdash; IPHONES SEMINUEVOS &mdash; SERVICIO TÉCNICO &mdash; </span>
+        <span>INNOVACIÓN CONSTANTE &mdash; TECNOLOGÍA DE PUNTA &mdash; IPHONES SEMINUEVOS &mdash; SERVICIO TÉCNICO &mdash; </span>
       </div>
     </div>
 
     <!-- PORTFOLIO / GALLERY -->
     <section class="gallery">
       <div class="gallery-header">
-        <h2 class="section-title">NUESTRA <br/> ESENCIA</h2>
-        <p class="section-desc">Desde los lienzos más finos hasta zapatillas intervenidas. En Mokalú respiramos arte en cada detalle.</p>
+        <h2 class="section-title">NUESTRO <br/> CATÁLOGO</h2>
+        <p class="section-desc">Desde iPhones garantizados hasta reparaciones expertas. En Cellular Center respiramos tecnología y calidad.</p>
       </div>
 
       <div class="gallery-grid">
         <div class="gallery-item large">
           <div class="image-wrapper">
-            <img src="/images/sneakers.png" alt="Zapatillas Personalizadas" />
+            <img src="/images/premium_iphones.png" alt="iPhones Seminuevos" />
             <div class="item-overlay">
-              <h3>Arte Único</h3>
-              <p>Zapatillas Personalizadas</p>
+              <h3>iPhones</h3>
+              <p>Calidad garantizada</p>
             </div>
           </div>
         </div>
         <div class="gallery-item">
           <div class="image-wrapper">
-            <img src="/images/supplies.png" alt="Materiales de Arte" />
+            <img src="/images/tech_repair.png" alt="Servicio Técnico" />
             <div class="item-overlay">
-              <h3>Herramientas</h3>
-              <p>Papelería Premium</p>
+              <h3>Servicio Técnico</h3>
+              <p>Rápido y Seguro</p>
             </div>
           </div>
         </div>
@@ -69,47 +69,45 @@
       <div class="footer-grid">
         <!-- Branding / Contact -->
         <div class="footer-col brand-col">
-          <h2 class="footer-logo">MOKALÚ.</h2>
-          <p class="contact-email"><a href="mailto:mokaluventas@gmail.com">mokaluventas@gmail.com</a></p>
-          <p class="contact-email"><a href="mailto:lamg5208@gmail.com">lamg5208@gmail.com</a></p>
+          <h2 class="footer-logo">CELLULAR CENTER</h2>
+          <p class="contact-email"><a href="mailto:contacto@cellularcenter.com">contacto@cellularcenter.com</a></p>
           <div class="phones">
-            <a href="tel:0967472310">0967472310</a> &mdash; 
-            <a href="tel:0983849378">0983849378</a>
+            <a href="tel:0917909616">0917909616</a>
           </div>
-          <p class="copyright">&copy; {{ new Date().getFullYear() }} MOKALU S.A.S. All rights reserved.</p>
+          <p class="copyright">&copy; {{ new Date().getFullYear() }} Cellular Center. All rights reserved.</p>
         </div>
 
-        <!-- SRI Legal Data -->
+        <!-- Verification Data -->
         <div class="footer-col legal-data">
-          <h4>Información Comercial y Tributaria</h4>
+          <h4>Datos de Verificación Comercial</h4>
           <div class="data-grid">
             <div class="data-item">
               <span class="label">Razón Social</span>
-              <span class="value">MOKALU S.A.S.</span>
+              <span class="value">ORTEGA AVILES HENRY GIOVANNI</span>
             </div>
             <div class="data-item">
               <span class="label">RUC</span>
-              <span class="value">0993285811001</span>
+              <span class="value">0917909616001</span>
             </div>
             <div class="data-item">
-              <span class="label">Representante</span>
-              <span class="value">Oyola Galarza Monica Alexandra</span>
+              <span class="label">Cédula / Licencia #</span>
+              <span class="value">0917909616</span>
             </div>
             <div class="data-item">
-              <span class="label">Estado / Régimen</span>
-              <span class="value">Activo / RIMPE Emprendedor</span>
+              <span class="label">Fecha de Nacimiento</span>
+              <span class="value">28-01-1989</span>
             </div>
             <div class="data-item">
-              <span class="label">Actividades</span>
-              <span class="value">Venta al por mayor y menor de artículos de papelería especializada.</span>
+              <span class="label">Nacionalidad</span>
+              <span class="value">Ecuador</span>
             </div>
             <div class="data-item">
-              <span class="label">Fechas SRI</span>
-              <span class="value">Constitución: 20/10/2020 | Inicio: 23/10/2020</span>
+              <span class="label">Dirección</span>
+              <span class="value">URB. TORRES DEL RIO DPTO. C 104</span>
             </div>
             <div class="data-item">
-              <span class="label">Verificación SRI</span>
-              <span class="value">CATRCR2022002933710</span>
+              <span class="label">Licencia Emisión/Vencimiento</span>
+              <span class="value">21-01-2025 / 20-01-2030 (Cat. B)</span>
             </div>
           </div>
         </div>
@@ -121,16 +119,8 @@
             Vía a la Costa Km 12.5,<br>
             C.C. Laguna Plaza, Local 317<br>
             (Primer piso alto junto al ascensor)<br>
-            Guayaquil, Guayas, Zona 8<br>
-            Ecuador
+            Guayaquil, Ecuador
           </p>
-          
-          <div class="tax-tags">
-            <span class="tax-tag">IVA</span>
-            <span class="tax-tag">Renta Sociedades</span>
-            <span class="tax-tag">ATS</span>
-            <span class="tax-tag">ADI</span>
-          </div>
         </div>
       </div>
     </footer>
@@ -468,23 +458,6 @@ $color-muted: #888888;
             font-size: 0.85rem;
             color: #ccc;
           }
-        }
-      }
-    }
-
-    .address-col {
-      .tax-tags {
-        margin-top: 2rem;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 0.5rem;
-
-        .tax-tag {
-          font-size: 0.65rem;
-          padding: 0.2rem 0.5rem;
-          border: 1px solid #333;
-          border-radius: 4px;
-          color: #aaa;
         }
       }
     }
