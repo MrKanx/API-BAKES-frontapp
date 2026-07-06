@@ -1,63 +1,72 @@
 <script setup lang="ts">
-// Cellular Center - Awwwards Style Landing Page
+// One Love Coffee Shop - Awwwards Style Landing Page
 </script>
 
 <template>
   <div class="smooth-scroll-wrapper">
     <!-- HERO SECTION -->
     <section class="hero">
-      <div class="hero-bg" style="background-image: url('/images/tech_hero_bg.png');"></div>
+      <div class="hero-bg" style="background-image: url('/images/onelove_hero_bg.png');"></div>
       <div class="hero-overlay"></div>
       
       <nav class="nav">
-        <div class="logo">CELLULAR CENTER</div>
-        <a href="#contacto" class="btn-contact">Hablemos</a>
+        <div class="logo">ONE LOVE COFFEE SHOP</div>
+        <a href="#contacto" class="btn-contact">Visítanos</a>
       </nav>
 
       <div class="hero-content">
         <div class="reveal-text">
-          <h1 class="display-title">TU NUEVO <br/> IPHONE</h1>
+          <h1 class="display-title">ONE LOVE <br/> COFFEE SHOP</h1>
         </div>
-        <p class="hero-subtitle">iPhones seminuevos y servicio técnico especializado <br/> para mantenerte conectado.</p>
+        <p class="hero-subtitle">Café orgánico de especialidad, gastronomía variada <br/> y buena vibra frente al río en Puerto Santa Ana, Guayaquil.</p>
       </div>
 
       <div class="scroll-indicator">
         <div class="mouse"></div>
-        <span>Descubre</span>
+        <span>Descubre más</span>
       </div>
     </section>
 
     <!-- MARQUEE -->
     <div class="marquee-container">
       <div class="marquee">
-        <span>INNOVACIÓN CONSTANTE &mdash; TECNOLOGÍA DE PUNTA &mdash; IPHONES SEMINUEVOS &mdash; SERVICIO TÉCNICO &mdash; </span>
-        <span>INNOVACIÓN CONSTANTE &mdash; TECNOLOGÍA DE PUNTA &mdash; IPHONES SEMINUEVOS &mdash; SERVICIO TÉCNICO &mdash; </span>
+        <span>CAFÉ DE ESPECIALIDAD &mdash; BUENA VIBRA &mdash; FILOSOFÍA BOB MARLEY &mdash; OSOS DE PELUCHE GIGANTES &mdash; PUERTO SANTA ANA &mdash; </span>
+        <span>CAFÉ DE ESPECIALIDAD &mdash; BUENA VIBRA &mdash; FILOSOFÍA BOB MARLEY &mdash; OSOS DE PELUCHE GIGANTES &mdash; PUERTO SANTA ANA &mdash; </span>
       </div>
     </div>
 
     <!-- PORTFOLIO / GALLERY -->
     <section class="gallery">
       <div class="gallery-header">
-        <h2 class="section-title">NUESTRO <br/> CATÁLOGO</h2>
-        <p class="section-desc">Desde iPhones garantizados hasta reparaciones expertas. En Cellular Center respiramos tecnología y calidad.</p>
+        <h2 class="section-title">NUESTRA <br/> PROPUESTA</h2>
+        <p class="section-desc">Un espacio diseñado para relajarse sin prisa. Combinamos café premium 100% arábigo, repostería artesanal y la mejor energía inspirada en Bob Marley.</p>
       </div>
 
       <div class="gallery-grid">
         <div class="gallery-item large">
           <div class="image-wrapper">
-            <img src="/images/premium_iphones.png" alt="iPhones Seminuevos" />
+            <img src="/images/specialty_coffee.png" alt="Café de Especialidad" />
             <div class="item-overlay">
-              <h3>iPhones</h3>
-              <p>Calidad garantizada</p>
+              <h3>Café de Especialidad</h3>
+              <p>Granos 100% arábigos y orgánicos</p>
             </div>
           </div>
         </div>
         <div class="gallery-item">
           <div class="image-wrapper">
-            <img src="/images/tech_repair.png" alt="Servicio Técnico" />
+            <img src="/images/gastronomy.png" alt="Gastronomía Variada" />
             <div class="item-overlay">
-              <h3>Servicio Técnico</h3>
-              <p>Rápido y Seguro</p>
+              <h3>Gastronomía Variada</h3>
+              <p>Brunch, postres artesanales y toques locales</p>
+            </div>
+          </div>
+        </div>
+        <div class="gallery-item wide">
+          <div class="image-wrapper">
+            <img src="/images/cozy_atmosphere.png" alt="Ambiente Acogedor" />
+            <div class="item-overlay">
+              <h3>Ambiente & Estética Acogedora</h3>
+              <p>Relájate junto al río en Puerto Santa Ana con la compañía de nuestros osos gigantes</p>
             </div>
           </div>
         </div>
@@ -69,41 +78,101 @@
       <div class="footer-grid">
         <!-- Branding / Contact -->
         <div class="footer-col brand-col">
-          <h2 class="footer-logo">CELLULAR CENTER.</h2>
-          <p class="contact-email"><a href="mailto:h.ushu@hotmail.com">h.ushu@hotmail.com</a></p>
+          <h2 class="footer-logo">ONE LOVE COFFEE SHOP</h2>
+          <p class="contact-email"><a href="mailto:carloslopezpatino@gmail.com">carloslopezpatino@gmail.com</a></p>
           <div class="phones">
-            <a href="tel:0997197439">0997197439</a>
+            <a href="tel:042852338">042852338</a>
           </div>
-          <p class="copyright">&copy; 2026 ORTEGA AVILES HENRY GIOVANNI. All rights reserved.</p>
+          <p class="copyright">&copy; 2026 CARLOS ALFREDO LOPEZ PATIÑO. Todos los derechos reservados.</p>
         </div>
 
         <!-- Verification Data -->
         <div class="footer-col legal-data">
-          <h4>Información Comercial y Tributaria</h4>
+          <h4>Información Comercial y Tributaria (RUC)</h4>
           <div class="data-grid">
             <div class="data-item">
-              <span class="label">Razón Social / Propietario</span>
-              <span class="value">ORTEGA AVILES HENRY GIOVANNI</span>
+              <span class="label">Propietario / Contribuyente</span>
+              <span class="value">CARLOS ALFREDO LOPEZ PATIÑO</span>
             </div>
             <div class="data-item">
               <span class="label">RUC</span>
-              <span class="value">0917909616001</span>
-            </div>
-            <div class="data-item span-2">
-              <span class="label">Actividades</span>
-              <span class="value">Venta al por mayor de teléfonos y equipos de comunicación, y servicios de reparación y mantenimiento de sistemas informáticos.</span>
+              <span class="value">0918539750001</span>
             </div>
             <div class="data-item">
-              <span class="label">Estado / Régimen</span>
-              <span class="value">Activo / Régimen General</span>
+              <span class="label">Estado RUC</span>
+              <span class="value">ACTIVO</span>
+            </div>
+            <div class="data-item">
+              <span class="label">Régimen / Tipo</span>
+              <span class="value">GENERAL / Persona Natural</span>
+            </div>
+            <div class="data-item">
+              <span class="label">Obligado a Llevar Contabilidad</span>
+              <span class="value">NO</span>
+            </div>
+            <div class="data-item">
+              <span class="label">Sucursales</span>
+              <span class="value">2 Abiertas / 1 Cerrada</span>
             </div>
             <div class="data-item span-2">
               <span class="label">Fechas SRI</span>
-              <span class="value">Registro: 24/04/2007 | Última Actualización: 22/08/2024</span>
+              <span class="value">Registro/Inicio: 28/08/2007 | Última Actualización: 08/06/2026</span>
             </div>
             <div class="data-item span-2">
-              <span class="label">Verificación SRI</span>
-              <span class="value">RCR1783119672725484</span>
+              <span class="label">Certificación RUC</span>
+              <span class="value">Emisión: 08/06/2026 | Código de Verificación: RCR178093671013762</span>
+            </div>
+          </div>
+
+          <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Datos de Identidad y Filial</h4>
+          <div class="data-grid">
+            <div class="data-item">
+              <span class="label">Cédula de Identidad (NUI)</span>
+              <span class="value">091853975-0</span>
+            </div>
+            <div class="data-item">
+              <span class="label">Nacionalidad / Sexo</span>
+              <span class="value">Ecuatoriana / Hombre</span>
+            </div>
+            <div class="data-item">
+              <span class="label">Fecha de Nacimiento</span>
+              <span class="value">24 de septiembre de 1986</span>
+            </div>
+            <div class="data-item">
+              <span class="label">Estado Civil</span>
+              <span class="value">Casado con Alexandra Margarita Vascones Pita</span>
+            </div>
+            <div class="data-item">
+              <span class="label">Nivel de Instrucción</span>
+              <span class="value">Superior (Magíster)</span>
+            </div>
+            <div class="data-item">
+              <span class="label">Emisión Cédula</span>
+              <span class="value">Guayaquil, 11/02/2021 (Expira: 11/02/2031)</span>
+            </div>
+            <div class="data-item span-2">
+              <span class="label">Filiación de Padres</span>
+              <span class="value">Padre: Carlos Armando Lopez Landin <br/> Madre: Elsa Cecilia Gladys Patiño Nuñez</span>
+            </div>
+          </div>
+
+          <h4 style="margin-top: 2rem; margin-bottom: 1rem;">Actividades Económicas Autorizadas</h4>
+          <div class="activities-list">
+            <div class="activity-group">
+              <h5>Servicios de Alimentación</h5>
+              <p>Venta de comidas y bebidas en restaurantes, cafeterías, locales de comida rápida, heladerías y fuentes de soda.</p>
+            </div>
+            <div class="activity-group">
+              <h5>Tecnología e Informática</h5>
+              <p>Diseño de estructura, contenido y escritura de código (programas, aplicaciones web y bases de datos).</p>
+            </div>
+            <div class="activity-group">
+              <h5>Producción Audiovisual</h5>
+              <p>Producción cinematográfica, videos, anuncios de TV, edición de audio, fotografía comercial y prensa.</p>
+            </div>
+            <div class="activity-group">
+              <h5>Actividades Inmobiliarias</h5>
+              <p>Alquiler de bienes inmuebles a cambio de una retribución o por contrato (locales comerciales).</p>
             </div>
           </div>
         </div>
@@ -112,15 +181,18 @@
         <div class="footer-col address-col">
           <h4>Ubicación</h4>
           <p>
-            Av. Plaza Dañín 26 e Intersección 05,<br>
-            (Frente a Andrés Borbor), Parroquia Tarqui,<br>
-            Código Postal 090308<br>
-            Guayaquil, Guayas, Zona 8<br>
+            Provincia: Guayas<br>
+            Cantón: Guayaquil<br>
+            Parroquia: Tarqui<br>
+            Calle Avenida Circunvalación,<br>
+            Manzana 25, Solar 16, entre 3era y 7ma<br>
+            <strong>Referencia:</strong> Diagonal a la Iglesia Evangélica Bautista<br>
             Ecuador
           </p>
           <div class="tax-badges">
-            <span class="badge">IVA</span>
-            <span class="badge">Declaración de IVA</span>
+            <span class="badge">RUC Activo</span>
+            <span class="badge">Régimen General</span>
+            <span class="badge">Servicios Turísticos</span>
           </div>
         </div>
       </div>
@@ -139,10 +211,12 @@
 
 $font-display: 'Syne', sans-serif;
 $font-body: 'Inter', sans-serif;
-$color-bg: #0a0a0a;
-$color-text: #ffffff;
-$color-accent: #f2295b;
-$color-muted: #888888;
+$color-bg: #0d0b0a;
+$color-text: #fcf8f2;
+$color-accent: #dfa841;
+$color-muted: #a69c90;
+$color-green: #4a5d4e;
+$color-red: #8f3d30;
 
 .smooth-scroll-wrapper {
   background-color: $color-bg;
@@ -336,13 +410,21 @@ $color-muted: #888888;
       overflow: hidden;
       border-radius: 8px;
       cursor: pointer;
+      aspect-ratio: 4 / 3;
 
       &.large {
         grid-column: span 7;
+        aspect-ratio: 16 / 10;
       }
-      &:not(.large) {
+      &.wide {
+        grid-column: span 12;
+        aspect-ratio: 21 / 9;
+        margin-top: 4rem;
+      }
+      &:not(.large):not(.wide) {
         grid-column: span 5;
         margin-top: 10vw;
+        aspect-ratio: 4 / 5;
       }
 
       .image-wrapper {
@@ -395,9 +477,9 @@ $color-muted: #888888;
 
 /* FOOTER */
 .legal-footer {
-  background: #050505;
+  background: #090807;
   padding: 6rem 4rem 2rem;
-  border-top: 1px solid rgba(255,255,255,0.1);
+  border-top: 1px solid rgba(255,255,255,0.05);
 
   .footer-grid {
     display: grid;
@@ -490,11 +572,34 @@ $color-muted: #888888;
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 0.05em;
-            color: #555;
+            color: #7a6e60;
           }
           .value {
             font-size: 0.85rem;
-            color: #ccc;
+            color: #ddd;
+          }
+        }
+      }
+
+      .activities-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1.5rem;
+        margin-top: 1rem;
+
+        .activity-group {
+          h5 {
+            font-family: $font-display;
+            font-size: 0.9rem;
+            color: $color-accent;
+            margin: 0 0 0.35rem 0;
+            font-weight: 700;
+          }
+          p {
+            font-size: 0.8rem;
+            color: #bbb;
+            line-height: 1.4;
+            margin: 0;
           }
         }
       }
@@ -557,19 +662,24 @@ $color-muted: #888888;
   }
   .gallery .gallery-grid {
     .gallery-item {
-      &.large, &:not(.large) {
+      &.large, &.wide, &:not(.large):not(.wide) {
         grid-column: span 12;
         margin-top: 0;
+        aspect-ratio: 16 / 10;
       }
     }
   }
 }
 @media (max-width: 768px) {
-  .legal-footer .legal-data .data-grid {
-    grid-template-columns: 1fr;
-    
-    .span-2 {
-      grid-column: span 1;
+  .legal-footer .legal-data {
+    .data-grid {
+      grid-template-columns: 1fr;
+      .span-2 {
+        grid-column: span 1;
+      }
+    }
+    .activities-list {
+      grid-template-columns: 1fr;
     }
   }
 }
