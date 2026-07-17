@@ -1,100 +1,237 @@
 <script setup lang="ts">
-// Ohayo Ecuador - Landing Page
+import { ref, computed } from 'vue'
+
+// Estado del menú
+const selectedCategory = ref<'all' | 'cookies' | 'brownies' | 'pastry'>('all')
+
+const categories = [
+  { id: 'all', name: 'Todos los Postres' },
+  { id: 'cookies', name: 'Galletas (Cookies)' },
+  { id: 'brownies', name: 'Brownies & Cuchareables' },
+  { id: 'pastry', name: 'Pastelería & Eventos' }
+]
+
+const menuItems = [
+  {
+    id: 1,
+    category: 'cookies',
+    name: 'Galletones New York Style',
+    description: 'Galletas de tamaño grande, estilo New York, crujientes por fuera y súper gorditas y suaves por dentro.',
+    tags: ['NYC Style', 'Artesanal'],
+    price: 'Favorito',
+    image: '/images/api_bakes_cookies.png'
+  },
+  {
+    id: 2,
+    category: 'cookies',
+    name: 'Galletas Rellenas Especiales',
+    description: 'Nuestra especialidad absoluta. Con rellenos ultra generosos. Los sabores más aclamados son Nutella y Leche Nido.',
+    tags: ['Relleno Generoso', 'Especialidad'],
+    price: 'Premium',
+    image: '/images/api_bakes_cookies.png'
+  },
+  {
+    id: 3,
+    category: 'cookies',
+    name: 'Cookie & Brownie Bites',
+    description: 'Versiones miniatura de nuestras galletas y brownies. Se venden por docenas o en cajas especiales de 36 o 40 unidades.',
+    tags: ['Para Compartir', 'Bites'],
+    price: 'Por Cajas',
+    image: '/images/api_bakes_hero.png'
+  },
+  {
+    id: 4,
+    category: 'cookies',
+    name: 'Api Fries',
+    description: 'Divertidas tiras de masa de galleta recién horneadas con forma de "papas fritas". Servidas con deliciosos dips de Nutella o Manjar.',
+    tags: ['Original', 'Con Dips'],
+    price: 'Divertido',
+    image: '/images/api_bakes_hero.png'
+  },
+  {
+    id: 5,
+    category: 'brownies',
+    name: 'Brownies Fudgy (Negritos)',
+    description: 'Textura fudgy perfecta: húmedos, densos y cargados de chocolate. Olvídate del estilo bizcocho común, esto es chocolate real.',
+    tags: ['Fudgy', 'Cacao Puro'],
+    price: 'Irresistible',
+    image: '/images/api_bakes_brownies.png'
+  },
+  {
+    id: 6,
+    category: 'brownies',
+    name: 'Postres Cuchareables',
+    description: 'Tarrinas gourmet diseñadas para devorar directo con cuchara. Capas perfectas. Ejemplo: Oreo & Nutella con mucho chocolate y trozos crujientes.',
+    tags: ['Cuchareable', 'Oreo & Nutella'],
+    price: 'En Tarrina',
+    image: '/images/api_bakes_desserts.png'
+  },
+  {
+    id: 7,
+    category: 'pastry',
+    name: 'Artisanal Cupcakes',
+    description: 'Esponjosos cupcakes horneados en lotes pequeños y coronados con nuestro sedoso buttercream artesanal hecho desde cero.',
+    tags: ['Buttercream', 'Decorados'],
+    price: 'Bajo Pedido',
+    image: '/images/api_bakes_desserts.png'
+  },
+  {
+    id: 8,
+    category: 'pastry',
+    name: 'Brazo Gitano Artesanal',
+    description: 'Bizcocho enrollado súper suave relleno de dulce tradicional. Disponible en tamaño MINI (ideal antojo) y Familiar.',
+    tags: ['Clásico', 'Familiar o Mini'],
+    price: 'Tradicional',
+    image: '/images/api_bakes_hero.png'
+  },
+  {
+    id: 9,
+    category: 'pastry',
+    name: 'Kits de Regalo (Cookie Boxes)',
+    description: 'Cajas de galletas de temporada decoradas y personalizadas para fechas especiales: Día del Padre, San Valentín o Navidad.',
+    tags: ['Personalizado', 'Regalo Especial'],
+    price: 'Kits de Temporada',
+    image: '/images/api_bakes_hero.png'
+  }
+]
+
+const filteredItems = computed(() => {
+  if (selectedCategory.value === 'all') return menuItems
+  return menuItems.filter(item => item.category === selectedCategory.value)
+})
 </script>
 
 <template>
   <div class="smooth-scroll-wrapper">
-    <!-- HERO SECTION -->
-    <section class="hero">
-      <div class="hero-bg" style="background-image: url('/images/ohayo_hero_bg.png');"></div>
+    <!-- HEADER / HERO -->
+    <header class="hero">
+      <div class="hero-bg" style="background-image: url('/images/api_bakes_hero.png');"></div>
       <div class="hero-overlay"></div>
       
       <nav class="nav">
-        <div class="logo">OHAYO ECUADOR</div>
+        <div class="logo">API BAKES</div>
         <a href="#contacto" class="btn-contact">Contacto</a>
       </nav>
 
       <div class="hero-content">
         <div class="reveal-text">
-          <h1 class="display-title">OHAYO <br/> ECUADOR</h1>
+          <h1 class="display-title">API <br/> BAKES</h1>
         </div>
-        <p class="hero-subtitle">Tu portal premium a la cultura otaku y geek en Ecuador. <br/> Figuras originales, literatura manga, katanas coleccionables y accesorios con envíos nacionales.</p>
+        <p class="hero-subtitle">
+          Repostería artesanal horneada en lotes pequeños bajo pedido en Samborondón, Ecuador. 
+          Postres hechos a mano con un enfoque en texturas indulgentes y personalización para eventos o regalos.
+        </p>
       </div>
 
       <div class="scroll-indicator">
         <div class="mouse"></div>
         <span>Desliza para ver</span>
       </div>
-    </section>
+    </header>
 
     <!-- MARQUEE -->
     <div class="marquee-container">
       <div class="marquee">
-        <span>FIGURAS DE COLECCIÓN &mdash; LITERATURA MANGA &mdash; NOVELAS LIGERAS &mdash; KATANAS PERSONALIZADAS &mdash; DAKIMAKURAS &mdash; ACCESORIOS GEEK &mdash; ENVÍOS A NIVEL NACIONAL &mdash; </span>
-        <span>FIGURAS DE COLECCIÓN &mdash; LITERATURA MANGA &mdash; NOVELAS LIGERAS &mdash; KATANAS PERSONALIZADAS &mdash; DAKIMAKURAS &mdash; ACCESORIOS GEEK &mdash; ENVÍOS A NIVEL NACIONAL &mdash; </span>
+        <span>GALLETAS &mdash; BROWNIES &mdash; CUCHAREABLES &mdash; CUPCAKES &mdash; BRAZO GITANO &mdash; PACKS DE REGALO &mdash; HECHO BAJO PEDIDO &mdash; </span>
+        <span>GALLETAS &mdash; BROWNIES &mdash; CUCHAREABLES &mdash; CUPCAKES &mdash; BRAZO GITANO &mdash; PACKS DE REGALO &mdash; HECHO BAJO PEDIDO &mdash; </span>
       </div>
     </div>
 
-    <!-- PORTFOLIO / GALLERY (CATEGORIES) -->
-    <section class="gallery">
+    <!-- SECCIÓN NUESTRA PROPUESTA -->
+    <section id="filosofia" class="gallery">
       <div class="gallery-header">
         <h2 class="section-title">NUESTRA <br/> PROPUESTA</h2>
-        <p class="section-desc">Nos especializamos en la importación y comercialización de productos exclusivos de anime, manga y videojuegos, combinando canales físicos y en línea.</p>
+        <p class="section-desc">
+          Nos especializamos en postres reconfortantes (Comfort Desserts) modernos, horneados en casa bajo pedido. 
+          "Detrás de cada pedido hay una historia", por lo que cuidamos cada detalle para garantizar frescura y un sabor casero auténtico.
+        </p>
       </div>
 
       <div class="gallery-grid">
         <div class="gallery-item large">
           <div class="image-wrapper">
-            <img src="/images/anime_figures.png" alt="Figuras de Colección" />
+            <img src="/images/api_bakes_cookies.png" alt="Galletones y Galletas Rellenas" />
             <div class="item-overlay">
-              <h3>Figuras de Colección</h3>
-              <p>Estatuas a escala y figuras de acción originales de tus series favoritas.</p>
+              <h3>Galletas Rellenas & Galletones</h3>
+              <p>Galletas de tamaño grande estilo New York, crujientes y rellenas de Nutella o Leche Nido.</p>
             </div>
           </div>
         </div>
         <div class="gallery-item">
           <div class="image-wrapper">
-            <img src="/images/manga_novels.png" alt="Literatura Anime" />
+            <img src="/images/api_bakes_brownies.png" alt="Brownies Fudgy" />
             <div class="item-overlay">
-              <h3>Literatura Anime</h3>
-              <p>Venta de tomos de manga y novelas ligeras en español e inglés.</p>
+              <h3>Brownies (Negritos)</h3>
+              <p>Textura fudgy, húmeda y densa. Cacao puro horneado con pasión.</p>
             </div>
           </div>
         </div>
         <div class="gallery-item wide">
           <div class="image-wrapper">
-            <img src="/images/geek_accessories.png" alt="Accesorios Variados" />
+            <img src="/images/api_bakes_desserts.png" alt="Postres Cuchareables y Cupcakes" />
             <div class="item-overlay">
-              <h3>Accesorios Variados</h3>
-              <p>Cojines Dakimakura, artículos de consolas de videojuegos y mercancía temática general.</p>
-            </div>
-          </div>
-        </div>
-        <div class="gallery-item" style="grid-column: span 12; margin-top: 4rem; aspect-ratio: 21 / 9;">
-          <div class="image-wrapper">
-            <img src="/images/katana_replicas.png" alt="Réplicas Coleccionables" />
-            <div class="item-overlay">
-              <h3>Réplicas Coleccionables</h3>
-              <p>Katanas personalizadas inspiradas en personajes icónicos.</p>
+              <h3>Cuchareables & Cupcakes</h3>
+              <p>Tarrinas gourmet de Oreo & Nutella y cupcakes decorados con buttercream artesanal.</p>
             </div>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- SECCIÓN MENÚ / CATÁLOGO -->
+    <section id="menu" class="menu-section">
+      <div class="menu-header">
+        <h2 class="section-title">NUESTRO MENÚ</h2>
+        <p class="section-desc">Selecciona una categoría para ver nuestras especialidades horneadas bajo pedido.</p>
+        
+        <div class="filter-tabs">
+          <button 
+            v-for="cat in categories" 
+            :key="cat.id"
+            :class="['filter-btn', { active: selectedCategory === cat.id }]"
+            @click="selectedCategory = cat.id as any"
+          >
+            {{ cat.name }}
+          </button>
+        </div>
+      </div>
 
+      <!-- Grid de Postres -->
+      <div class="menu-grid">
+        <div v-for="item in filteredItems" :key="item.id" class="menu-card">
+          <div class="card-img-wrapper">
+            <img :src="item.image" :alt="item.name" />
+            <div class="card-tag">{{ item.price }}</div>
+          </div>
+          <div class="card-content">
+            <div class="card-header">
+              <h3>{{ item.name }}</h3>
+            </div>
+            <p>{{ item.description }}</p>
+            <div class="card-footer">
+              <div class="tags-container">
+                <span v-for="tag in item.tags" :key="tag" class="tag">{{ tag }}</span>
+              </div>
+              <a href="https://wa.me/593985284807" target="_blank" class="btn-order-item">Pedir</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (CON TODA LA INFORMACIÓN DE VERIFICACIÓN AL ESTILO DEL SITIO ORIGINAL) -->
     <footer id="contacto" class="legal-footer">
       <div class="footer-grid">
         <!-- Branding / Contact -->
         <div class="footer-col brand-col">
-          <h2 class="footer-logo">OHAYO ECUADOR</h2>
-          <p class="contact-email"><a href="mailto:brandoncoellomoreira@gmail.com">brandoncoellomoreira@gmail.com</a></p>
+          <h2 class="footer-logo">API BAKES</h2>
+          <p class="contact-email">
+            <a href="mailto:anapaulaschweitzer29@gmail.com">anapaulaschweitzer29@gmail.com</a>
+          </p>
           <div class="phones">
-            <a href="tel:0995076954">0995076954</a>
+            <a href="tel:0985284807">0985284807</a>
           </div>
-          <p class="copyright">&copy; 2026 BRANDON SANTIAGO COELLO MOREIRA. Todos los derechos reservados.</p>
+          <p class="copyright">&copy; 2026 SCHWEITZER VINTIMILLA ANA PAULA. Todos los derechos reservados.</p>
         </div>
 
         <!-- Verification Summary Quick -->
@@ -103,27 +240,52 @@
           <div class="data-grid">
             <div class="data-item">
               <span class="label">Propietario</span>
-              <span class="value">BRANDON SANTIAGO COELLO MOREIRA</span>
+              <span class="value">SCHWEITZER VINTIMILLA ANA PAULA</span>
             </div>
             <div class="data-item">
               <span class="label">RUC</span>
-              <span class="value">0952265528001</span>
+              <span class="value">0922854674001</span>
+            </div>
+            <div class="data-item">
+              <span class="label">Cédula (NUI)</span>
+              <span class="value">0922854674</span>
             </div>
             <div class="data-item">
               <span class="label">Régimen</span>
-              <span class="value">RIMPE - Negocio Popular</span>
+              <span class="value">GENERAL</span>
             </div>
             <div class="data-item">
               <span class="label">Obligado Contabilidad</span>
               <span class="value">NO</span>
             </div>
+            <div class="data-item">
+              <span class="label">Estado RUC</span>
+              <span class="value">ACTIVO</span>
+            </div>
+            <div class="data-item">
+              <span class="label">Inicio Actividades</span>
+              <span class="value">23/06/2020</span>
+            </div>
+            <div class="data-item">
+              <span class="label">Última Actualización</span>
+              <span class="value">11/12/2025</span>
+            </div>
             <div class="data-item span-2">
-              <span class="label">Actividad SRI Principal</span>
-              <span class="value">Venta al por mayor de otros productos diversos para el consumidor</span>
+              <span class="label">Actividades Económicas SRI</span>
+              <span class="value">
+                • <strong>Alimenticias:</strong> Elaboración de tortas, tartas, etc. (API BAKES).<br>
+                • <strong>Jurídicas:</strong> Asesoramiento civil, penal, laboral y prestación de servicios profesionales.<br>
+                • <strong>Comerciales:</strong> Asesoramiento corporativo (cabildeo/lobbies) y servicios diversos.<br>
+                • <strong>Agrícolas:</strong> Cultivos de frutos (pitahaya, tuna, algarropa, taxos, etc.).
+              </span>
             </div>
             <div class="data-item span-2">
               <span class="label">Código Certificado RUC</span>
-              <span class="value">RCR1781740466673260 (Emisión 17/Jun/2026)</span>
+              <span class="value">RCR1777913868338118 (Emisión: 04/May/2026 - Verificable SRI en Línea, Res. NAC-DGERCGC15-00000217)</span>
+            </div>
+            <div class="data-item span-2">
+              <span class="label">Cédula Digital (Gob.EC)</span>
+              <span class="value">No: 086030110 (Vence: 03/Jun/2032, Generado: 17/07/2026 10:45:58, Verificación QR y PIN pág. 3)</span>
             </div>
           </div>
         </div>
@@ -135,13 +297,15 @@
             Provincia: Guayas<br>
             Cantón: Guayaquil<br>
             Parroquia: Tarqui<br>
-            Barrio Garzota 2, Calle Washington Delgado C.,<br>
-            Villa 8, Intersección 14 Pasaje 3 NE.<br>
-            <strong>Referencia:</strong> A una cuadra del gimnasio Vikingos.
+            Dirección: Calle Av. José Joaquín Orrantia No. 801 e Intersección Av. Las Américas (Barrio: Calle General).<br>
+            <strong>Referencia:</strong> Al lado de Grilling.<br>
+            <strong>Establecimientos:</strong> 1 Abierto / 0 Cerrados<br>
+            <strong>Nacionalidad:</strong> Ecuatoriana (Nacimiento: 29 de mayo de 2000)<br>
+            <strong>Estado Civil:</strong> Casada (Cónyuge: Juan Javier Neira Anda)
           </p>
           <div class="tax-badges">
             <span class="badge">RUC Activo</span>
-            <span class="badge">RIMPE</span>
+            <span class="badge">Régimen General</span>
             <span class="badge">E-Commerce & Físico</span>
           </div>
         </div>
@@ -161,12 +325,12 @@
 
 $font-display: 'Syne', sans-serif;
 $font-body: 'Inter', sans-serif;
-$color-bg: #06050b; // Deep night violet
-$color-card: #110d1e; // Purple night card
-$color-text: #f3effa; // Warm off-white
-$color-accent: #ff2a5f; // Neon pink/magenta
-$color-secondary: #00e5ff; // Neon cyan
-$color-muted: #9f95b5; // Muted lavender
+$color-bg: #1c0e07; // Chocolate Profundo
+$color-card: #2a1910; // Chocolate Café
+$color-text: #faf6f0; // Crema Suave
+$color-accent: #d4a373; // Oro Caramelo
+$color-secondary: #e07a5f; // Sweet Coral / Baya
+$color-muted: #a3958c; // Muted Cocoa Gray
 
 .smooth-scroll-wrapper {
   background-color: $color-bg;
@@ -234,7 +398,7 @@ $color-muted: #9f95b5; // Muted lavender
 
       &:hover {
         background: $color-accent;
-        color: #fff;
+        color: $color-bg;
         border-color: $color-accent;
         box-shadow: 0 0 15px rgba($color-accent, 0.4);
       }
@@ -315,13 +479,13 @@ $color-muted: #9f95b5; // Muted lavender
 /* MARQUEE */
 .marquee-container {
   padding: 3rem 0;
-  background: #0d091a;
-  border-top: 1px solid rgba($color-secondary, 0.15);
-  border-bottom: 1px solid rgba($color-secondary, 0.15);
+  background: #140903;
+  border-top: 1px solid rgba($color-accent, 0.15);
+  border-bottom: 1px solid rgba($color-accent, 0.15);
   color: #fff;
   overflow: hidden;
   white-space: nowrap;
-  box-shadow: 0 0 20px rgba($color-secondary, 0.03);
+  box-shadow: 0 0 20px rgba($color-accent, 0.03);
 
   .marquee {
     display: inline-block;
@@ -361,7 +525,7 @@ $color-muted: #9f95b5; // Muted lavender
     }
 
     .section-desc {
-      max-width: 400px;
+      max-width: 450px;
       font-size: 1.1rem;
       color: $color-muted;
       line-height: 1.6;
@@ -435,7 +599,7 @@ $color-muted: #9f95b5; // Muted lavender
       }
 
       &:hover {
-        border-color: rgba($color-secondary, 0.3);
+        border-color: rgba($color-accent, 0.3);
         box-shadow: 0 10px 30px rgba(0,0,0,0.5);
 
         .image-wrapper img {
@@ -449,13 +613,192 @@ $color-muted: #9f95b5; // Muted lavender
   }
 }
 
+/* MENU SECTION */
+.menu-section {
+  padding: 6rem 4rem 10vw;
+  border-top: 1px solid rgba($color-accent, 0.1);
 
+  .menu-header {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 5rem;
+
+    .section-title {
+      font-family: $font-display;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      margin: 0 0 1rem;
+      font-weight: 800;
+    }
+
+    .section-desc {
+      color: $color-muted;
+      font-size: 1.1rem;
+      margin-bottom: 3rem;
+    }
+
+    .filter-tabs {
+      display: inline-flex;
+      background: rgba($color-card, 0.5);
+      border: 1px solid rgba($color-accent, 0.15);
+      padding: 0.4rem;
+      border-radius: 50px;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.2rem;
+
+      .filter-btn {
+        background: transparent;
+        border: none;
+        color: $color-muted;
+        font-family: $font-body;
+        font-size: 0.9rem;
+        font-weight: 500;
+        padding: 0.8rem 1.6rem;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &.active, &:hover {
+          background-color: $color-accent;
+          color: $color-bg;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .menu-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.5rem;
+
+    .menu-card {
+      background-color: $color-card;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba($color-accent, 0.08);
+      transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+      display: flex;
+      flex-direction: column;
+
+      &:hover {
+        transform: translateY(-8px);
+        border-color: rgba($color-accent, 0.3);
+        box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+
+        .card-img-wrapper img {
+          transform: scale(1.05);
+        }
+      }
+
+      .card-img-wrapper {
+        position: relative;
+        aspect-ratio: 16 / 11;
+        overflow: hidden;
+        background-color: #0c0502;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          transition: transform 0.6s ease;
+        }
+
+        .card-tag {
+          position: absolute;
+          top: 1rem;
+          right: 1rem;
+          background: rgba($color-bg, 0.85);
+          color: $color-accent;
+          font-size: 0.75rem;
+          font-weight: 700;
+          letter-spacing: 0.05em;
+          padding: 0.4rem 0.9rem;
+          border-radius: 50px;
+          border: 1px solid rgba($color-accent, 0.25);
+          backdrop-filter: blur(5px);
+        }
+      }
+
+      .card-content {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+
+        .card-header {
+          margin-bottom: 0.8rem;
+          
+          h3 {
+            font-family: $font-display;
+            font-size: 1.45rem;
+            font-weight: 700;
+            margin: 0;
+            color: $color-text;
+            line-height: 1.25;
+          }
+        }
+
+        p {
+          color: $color-muted;
+          font-size: 0.92rem;
+          line-height: 1.5;
+          margin: 0 0 2rem;
+          flex-grow: 1;
+        }
+
+        .card-footer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-top: auto;
+          gap: 1rem;
+
+          .tags-container {
+            display: flex;
+            gap: 0.4rem;
+            flex-wrap: wrap;
+
+            .tag {
+              font-size: 0.7rem;
+              background-color: rgba($color-accent, 0.06);
+              color: $color-accent;
+              padding: 0.25rem 0.6rem;
+              border-radius: 4px;
+              border: 1px solid rgba($color-accent, 0.12);
+            }
+          }
+
+          .btn-order-item {
+            background-color: transparent;
+            border: 1px solid rgba($color-accent, 0.3);
+            color: $color-accent;
+            text-decoration: none;
+            font-size: 0.8rem;
+            font-weight: 700;
+            padding: 0.45rem 1.1rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+
+            &:hover {
+              background-color: $color-accent;
+              color: $color-bg;
+              border-color: $color-accent;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 
 /* FOOTER */
 .legal-footer {
-  background: darken($color-bg, 3%);
+  background: #0f0704;
   padding: 6rem 4rem 2rem;
-  border-top: 1px solid rgba(255,255,255,0.05);
+  border-top: 1px solid rgba($color-accent, 0.15);
 
   .footer-grid {
     display: grid;
@@ -499,7 +842,7 @@ $color-muted: #9f95b5; // Muted lavender
         margin-bottom: 2rem;
         
         a {
-          color: $color-secondary;
+          color: $color-accent;
           font-weight: 700;
         }
       }
@@ -507,6 +850,7 @@ $color-muted: #9f95b5; // Muted lavender
         margin-top: 3rem;
         font-size: 0.75rem;
         opacity: 0.5;
+        line-height: 1.4;
       }
     }
 
@@ -520,7 +864,7 @@ $color-muted: #9f95b5; // Muted lavender
         .badge {
           font-size: 0.7rem;
           padding: 0.25rem 0.5rem;
-          border: 1px solid rgba(255, 255, 255, 0.15);
+          border: 1px solid rgba($color-accent, 0.25);
           border-radius: 4px;
           color: $color-muted;
           text-transform: uppercase;
@@ -529,9 +873,9 @@ $color-muted: #9f95b5; // Muted lavender
           cursor: default;
 
           &:hover {
-            border-color: $color-secondary;
+            border-color: $color-accent;
             color: #fff;
-            background: rgba($color-secondary, 0.05);
+            background: rgba($color-accent, 0.05);
           }
         }
       }
@@ -561,6 +905,7 @@ $color-muted: #9f95b5; // Muted lavender
           .value {
             font-size: 0.85rem;
             color: #ddd;
+            line-height: 1.4;
           }
         }
       }
@@ -570,16 +915,16 @@ $color-muted: #9f95b5; // Muted lavender
   .footer-bottom {
     margin-top: 3rem;
     padding-top: 1.5rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba($color-accent, 0.1);
     text-align: center;
 
     .developer-credit {
       font-size: 0.8rem;
-      color: #555;
+      color: #615249;
       letter-spacing: 0.05em;
 
       a {
-        color: #777;
+        color: #8c786b;
         text-decoration: underline;
         text-underline-offset: 3px;
         transition: color 0.3s ease;
@@ -617,6 +962,7 @@ $color-muted: #9f95b5; // Muted lavender
 @media (max-width: 1024px) {
   .hero { padding: 2rem; }
   .gallery { padding: 5vw 2rem; }
+  .menu-section { padding: 6rem 2rem; }
   
   .legal-footer .footer-grid {
     grid-template-columns: 1fr;
@@ -632,7 +978,15 @@ $color-muted: #9f95b5; // Muted lavender
       }
     }
   }
+
+  .menu-section .menu-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-
+@media (max-width: 768px) {
+  .menu-section .menu-grid {
+    grid-template-columns: 1fr;
+  }
+}
 </style>
