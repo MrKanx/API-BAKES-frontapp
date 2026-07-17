@@ -118,7 +118,7 @@ const filteredItems = computed(() => {
           <h1 class="display-title">API <br/> BAKES</h1>
         </div>
         <p class="hero-subtitle">
-          Repostería artesanal horneada en lotes pequeños bajo pedido en Samborondón, Ecuador. 
+          Repostería artesanal horneada en lotes pequeños bajo pedido en Guayaquil, Ecuador. 
           Postres hechos a mano con un enfoque en texturas indulgentes y personalización para eventos o regalos.
         </p>
       </div>
