@@ -266,10 +266,7 @@ const filteredItems = computed(() => {
             <div class="data-item span-2">
               <span class="label">Actividades Económicas SRI</span>
               <span class="value">
-                • <strong>Alimenticias:</strong> Elaboración de tortas, tartas, etc. (API BAKES).<br>
-                • <strong>Jurídicas:</strong> Asesoramiento civil, penal, laboral y prestación de servicios profesionales.<br>
-                • <strong>Comerciales:</strong> Asesoramiento corporativo (cabildeo/lobbies) y servicios diversos.<br>
-                • <strong>Agrícolas:</strong> Cultivos de frutos (pitahaya, tuna, algarropa, taxos, etc.).
+                • <strong>Alimenticias:</strong> Elaboración de tortas, tartas, etc. (API BAKES).
               </span>
             </div>
             <div class="data-item span-2">
@@ -279,23 +276,7 @@ const filteredItems = computed(() => {
           </div>
         </div>
 
-        <!-- Address / Location -->
-        <div class="footer-col address-col">
-          <h4>Domicilio y Tienda</h4>
-          <p>
-            Provincia: Guayas<br>
-            Cantón: Guayaquil<br>
-            Parroquia: Tarqui<br>
-            Dirección: Calle Av. José Joaquín Orrantia No. 801 e Intersección Av. Las Américas (Barrio: Calle General).<br>
-            <strong>Referencia:</strong> Al lado de Grilling.<br>
-            <strong>Establecimientos:</strong> 1 Abierto / 0 Cerrados
-          </p>
-          <div class="tax-badges">
-            <span class="badge">RUC Activo</span>
-            <span class="badge">Régimen General</span>
-            <span class="badge">E-Commerce & Físico</span>
-          </div>
-        </div>
+
       </div>
 
       <div class="footer-bottom">
@@ -789,7 +770,7 @@ $color-muted: #a3958c; // Muted Cocoa Gray
 
   .footer-grid {
     display: grid;
-    grid-template-columns: 1.2fr 1.8fr 1.2fr;
+    grid-template-columns: 1.2fr 2fr;
     gap: 4rem;
 
     .footer-col {
@@ -841,32 +822,7 @@ $color-muted: #a3958c; // Muted Cocoa Gray
       }
     }
 
-    .address-col {
-      .tax-badges {
-        display: flex;
-        gap: 0.5rem;
-        margin-top: 1.5rem;
-        flex-wrap: wrap;
 
-        .badge {
-          font-size: 0.7rem;
-          padding: 0.25rem 0.5rem;
-          border: 1px solid rgba($color-accent, 0.25);
-          border-radius: 4px;
-          color: $color-muted;
-          text-transform: uppercase;
-          letter-spacing: 0.05em;
-          transition: all 0.3s ease;
-          cursor: default;
-
-          &:hover {
-            border-color: $color-accent;
-            color: #fff;
-            background: rgba($color-accent, 0.05);
-          }
-        }
-      }
-    }
 
     .legal-data {
       .data-grid {
