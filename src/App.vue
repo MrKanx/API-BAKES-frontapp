@@ -212,7 +212,7 @@ const filteredItems = computed(() => {
               <div class="tags-container">
                 <span v-for="tag in item.tags" :key="tag" class="tag">{{ tag }}</span>
               </div>
-              <a href="https://wa.me/593985284807" target="_blank" class="btn-order-item">Pedir</a>
+              <a href="https://wa.me/593981168925" target="_blank" class="btn-order-item">Pedir</a>
             </div>
           </div>
         </div>
@@ -225,13 +225,10 @@ const filteredItems = computed(() => {
         <!-- Branding / Contact -->
         <div class="footer-col brand-col">
           <h2 class="footer-logo">API BAKES</h2>
-          <p class="contact-email">
-            <a href="mailto:anapaulaschweitzer29@gmail.com">anapaulaschweitzer29@gmail.com</a>
-          </p>
           <div class="phones">
-            <a href="tel:0985284807">0985284807</a>
+            <a href="tel:+593981168925">+593 98 116 8925</a>
           </div>
-          <p class="copyright">&copy; 2026 SCHWEITZER VINTIMILLA ANA PAULA. Todos los derechos reservados.</p>
+          <p class="copyright">&copy; 2026 API BAKES. Todos los derechos reservados.</p>
         </div>
 
         <!-- Verification Summary Quick -->
@@ -240,15 +237,11 @@ const filteredItems = computed(() => {
           <div class="data-grid">
             <div class="data-item">
               <span class="label">Propietario</span>
-              <span class="value">SCHWEITZER VINTIMILLA ANA PAULA</span>
+              <span class="value">API BAKES</span>
             </div>
             <div class="data-item">
               <span class="label">RUC</span>
               <span class="value">0922854674001</span>
-            </div>
-            <div class="data-item">
-              <span class="label">Cédula (NUI)</span>
-              <span class="value">0922854674</span>
             </div>
             <div class="data-item">
               <span class="label">Régimen</span>
@@ -283,10 +276,6 @@ const filteredItems = computed(() => {
               <span class="label">Código Certificado RUC</span>
               <span class="value">RCR1777913868338118 (Emisión: 04/May/2026 - Verificable SRI en Línea, Res. NAC-DGERCGC15-00000217)</span>
             </div>
-            <div class="data-item span-2">
-              <span class="label">Cédula Digital (Gob.EC)</span>
-              <span class="value">No: 086030110 (Vence: 03/Jun/2032, Generado: 17/07/2026 10:45:58, Verificación QR y PIN pág. 3)</span>
-            </div>
           </div>
         </div>
 
@@ -299,9 +288,7 @@ const filteredItems = computed(() => {
             Parroquia: Tarqui<br>
             Dirección: Calle Av. José Joaquín Orrantia No. 801 e Intersección Av. Las Américas (Barrio: Calle General).<br>
             <strong>Referencia:</strong> Al lado de Grilling.<br>
-            <strong>Establecimientos:</strong> 1 Abierto / 0 Cerrados<br>
-            <strong>Nacionalidad:</strong> Ecuatoriana (Nacimiento: 29 de mayo de 2000)<br>
-            <strong>Estado Civil:</strong> Casada (Cónyuge: Juan Javier Neira Anda)
+            <strong>Establecimientos:</strong> 1 Abierto / 0 Cerrados
           </p>
           <div class="tax-badges">
             <span class="badge">RUC Activo</span>
